@@ -138,40 +138,39 @@
   <link rel="canonical" href="{{ page.url | absolute_url | strip_index }}">
   {% endif %}rty="og:type" content="website">
   <meta property="og:url" content="{{ page.url | absolute_url | strip_index }}">
-  {% if img != "" and img != site.avatar %} absolute_url | strip_index }}">
-  <meta name="twitter:card" content="summary_large_image">
+
+  {% if img != "" and img != site.avatar %}
+    <meta name="twitter:card" content="summary_large_image">
   {% else %}
-  <meta name="twitter:card" content="summary">
-  {% endif %}"twitter:card" content="summary_large_image">
+    <meta name="twitter:card" content="summary">
+  {% endif %}
   <meta name="twitter:site" content="@{{ site.social-network-links.twitter }}">
   <meta name="twitter:creator" content="@{{ site.social-network-links.twitter }}">
-  {% endif %}
-  <meta property="twitter:title" content="{{ title }}">twork-links.twitter }}">
-  <meta property="twitter:description" content="{{ description }}">ks.twitter }}">
+  <meta property="twitter:title" content="{{ title }}">
+  <meta property="twitter:description" content="{{ description }}">
 
-  {% if img != "" %}itter:title" content="{{ title }}">
-  <meta name="twitter:image" content="{{ img | absolute_url }}">}">
-  {% endif %}
   {% if img != "" %}
-  {% include matomo.html %}" content="{{ img | absolute_url }}">
+    <meta name="twitter:image" content="{{ img | absolute_url }}">
   {% endif %}
+
+  {% include matomo.html %}
+
   {% if page.comments and site.staticman.repository and site.staticman.branch %}
-  <link rel="stylesheet" href="{{ "/assets/css/staticman.css" | relative_url }}">
+    <link rel="stylesheet" href="{{ "/assets/css/staticman.css" | relative_url }}">
   {% endif %}
-  {% if page.comments and site.staticman.repository and site.staticman.branch %}
+
   {% assign favicon_exists = site.static_files | where: "path", "/favicon.ico" | size %}
   {% if favicon_exists == 1 %}
-  <link rel="icon" href="{{ '/favicon.ico' | relative_url }}" />
-  {% endif %}avicon_exists = site.static_files | where: "path", "/favicon.ico" | size %}
-  {% if favicon_exists == 1 %}
-  {% if page.head-extra %}{ '/favicon.ico' | relative_url }}" />
+    <link rel="icon" href="{{ '/favicon.ico' | relative_url }}" />
+  {% endif %}
+
+  {% if page.head-extra %}
     {% for file in page.head-extra %}
       {% include {{ file }} %}
-    {% endfor %}d-extra %}
-  {% endif %}le in page.head-extra %}
-      {% include {{ file }} %}
-  <link rel="stylesheet" href="{{ '/assets/css/darkmode.css' | relative_url }}">endfor %}
+    {% endfor %}
   {% endif %}
+
+  <link rel="stylesheet" href="{{ '/assets/css/darkmode.css' | relative_url }}">
 
 
 </head>
