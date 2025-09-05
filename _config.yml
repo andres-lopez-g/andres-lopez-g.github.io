@@ -20,7 +20,7 @@ author: Andrés Julián López González
 ###############################################
 
 navbar-links:
-  About Me: "aboutme"
+  About: "aboutme"
   Resources:
     - Beautiful Jekyll: "https://beautifuljekyll.com"
     - Learn markdown: "https://www.markdowntutorial.com/"
@@ -299,6 +299,12 @@ exclude:
 plugins:
   - jekyll-paginate
   - jekyll-sitemap
+
+# Language settings
+language: es
+languages:
+  - es
+  - en
 
 # Beautiful Jekyll / Dean Attali
 # 2fc73a3a967e97599c9763d05e564189
