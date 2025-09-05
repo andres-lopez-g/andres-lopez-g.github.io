@@ -82,18 +82,16 @@
     {% endfor %}
   {% endif %}
 
-  {% if page.ext-css %}>
-    {% for css in page.ext-css %}ssets/css/darkmode.css">
+  {% if page.ext-css %}
+    {% for css in page.ext-css %}
       {% include ext-css.html css=css %}
-    {% endfor %}-css %}
-  {% endif %}s in page.ext-css %}
-      {% include ext-css.html css=css %}
+    {% endfor %}
+  {% endif %}
   {% if page.css %}
     {% for css in page.css %}
       <link rel="stylesheet" href="{{ css | relative_url }}">
-    {% endfor %} %}
-  {% endif %}s in page.css %}
-      <link rel="stylesheet" href="{{ css | relative_url }}">
+    {% endfor %}
+  {% endif %}
   {% if site.fb_app_id %}
   <meta property="fb:app_id" content="{{ site.fb_app_id }}">
   {% endif %}
