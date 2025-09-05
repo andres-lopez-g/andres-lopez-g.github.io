@@ -29,6 +29,61 @@ common-js:
 
   {% include nav.html %}
 
+  <!-- Dark mode toggle button -->
+  <button id="darkModeToggle" style="position:fixed;bottom:2rem;right:2rem;z-index:1001;padding:0.7em 1.2em;background:#242526;color:#e4e6eb;border:1px solid #1a73e8;border-radius:2em;box-shadow:0 0 8px #1a73e8;cursor:pointer;transition:background 0.2s;">🌙 Dark Mode</button>
+
+  <!-- Particles.js background for flare -->
+  <div id="particles-js"></div>
+  <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+  <script>
+    particlesJS("particles-js", {
+      "particles": {
+        "number": {"value": 40},
+        "color": {"value": "#1a73e8"},
+        "shape": {"type": "circle"},
+        "opacity": {"value": 0.3},
+        "size": {"value": 3},
+        "move": {"enable": true, "speed": 1}
+      },
+      "interactivity": {
+        "events": {"onhover": {"enable": true, "mode": "repulse"}}
+      }
+    });
+  </script>
+  <style>
+    #particles-js {
+      position: fixed;
+      width: 100vw;
+      height: 100vh;
+      z-index: 0;
+      top: 0; left: 0;
+      pointer-events: none;
+    }
+    body > *:not(#particles-js) {
+      position: relative;
+      z-index: 1;
+    }
+  </style>
+
+  <script>
+    // Dark mode toggle logic
+    const toggleBtn = document.getElementById('darkModeToggle');
+    function setDarkMode(on) {
+      if (on) {
+        document.body.classList.add('dark-mode');
+        localStorage.setItem('darkMode', 'on');
+        toggleBtn.textContent = '☀️ Light Mode';
+      } else {
+        document.body.classList.remove('dark-mode');
+        localStorage.setItem('darkMode', 'off');
+        toggleBtn.textContent = '🌙 Dark Mode';
+      }
+    }
+    // On load, set mode from localStorage
+    setDarkMode(localStorage.getItem('darkMode') === 'on');
+    toggleBtn.onclick = () => setDarkMode(!document.body.classList.contains('dark-mode'));
+  </script>
+
   {{ content }}
 
   {% include footer.html %}
