@@ -17,6 +17,8 @@ common-ext-js:
     sri: "sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
 common-js:
   - "/assets/js/beautifuljekyll.js"
+site-css:
+  - "/assets/css/darkmode.css"
 ---
 
 <!DOCTYPE html>
@@ -68,20 +70,28 @@ common-js:
   <script>
     // Dark mode toggle logic
     const toggleBtn = document.getElementById('darkModeToggle');
-    function setDarkMode(on) {
+
+    function applyDarkMode(on) {
       if (on) {
         document.body.classList.add('dark-mode');
         localStorage.setItem('darkMode', 'on');
-        toggleBtn.textContent = '☀️ Light Mode';
+        if (toggleBtn) toggleBtn.textContent = '☀️ Light Mode';
       } else {
         document.body.classList.remove('dark-mode');
         localStorage.setItem('darkMode', 'off');
-        toggleBtn.textContent = '🌙 Dark Mode';
+        if (toggleBtn) toggleBtn.textContent = '🌙 Dark Mode';
       }
     }
-    // On load, set mode from localStorage
-    setDarkMode(localStorage.getItem('darkMode') === 'on');
-    toggleBtn.onclick = () => setDarkMode(!document.body.classList.contains('dark-mode'));
+
+    const saved = localStorage.getItem('darkMode');
+    const prefers = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+    applyDarkMode(saved ? saved === 'on' : prefers);
+
+    if (toggleBtn) {
+      toggleBtn.addEventListener('click', () => {
+        applyDarkMode(!document.body.classList.contains('dark-mode'));
+      });
+    }
   </script>
 
   {{ content }}

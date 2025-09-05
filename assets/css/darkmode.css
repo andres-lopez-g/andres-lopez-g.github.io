@@ -15,57 +15,77 @@
   --body-font: 'Lora', 'Times New Roman', serif;
 }
 
-/* Add some glow to links */
-a, .navbar-custom .navbar-nav .nav-link {
-  text-shadow: 0 0 8px #1a73e8;
-  transition: color 0.2s, text-shadow 0.2s;
-}
-a:hover, .navbar-custom .navbar-nav .nav-link:hover {
-  color: #fff;
-  text-shadow: 0 0 16px #4e9af1, 0 0 8px #fff;
+/* Dark variables only when .dark-mode is on */
+body.dark-mode {
+  --page-col: #18191a;
+  --text-col: #e4e6eb;
+  --link-col: #4e9af1;
+  --hover-col: #1a73e8;
+  --navbar-col: #242526;
+  --navbar-text-col: #e4e6eb;
+  --navbar-border-col: #3a3b3c;
+  --footer-col: #242526;
+  --footer-text-col: #b0b3b8;
+  --footer-link-col: #e4e6eb;
+  --footer-hover-col: #1a73e8;
+  --mid-col: #b0b3b8;
+  --header-font: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  --body-font: 'Lora', 'Times New Roman', serif;
 }
 
-/* Add a subtle animated gradient background */
-body {
+/* Effects only in dark mode */
+body.dark-mode {
   background: linear-gradient(-45deg, #18191a, #242526, #1a73e8, #18191a);
   background-size: 400% 400%;
   animation: gradientBG 20s ease infinite;
 }
-
 @keyframes gradientBG {
   0% {background-position: 0% 50%;}
   50% {background-position: 100% 50%;}
   100% {background-position: 0% 50%;}
 }
 
-/* Add a soft box-shadow to cards and navbar */
-.navbar-custom, .post-preview, .blog-post, .container-md, .container-fluid {
+body.dark-mode a,
+body.dark-mode .navbar-custom .navbar-nav .nav-link {
+  text-shadow: 0 0 8px #1a73e8;
+  transition: color 0.2s, text-shadow 0.2s;
+}
+body.dark-mode a:hover,
+body.dark-mode .navbar-custom .navbar-nav .nav-link:hover {
+  color: #fff;
+  text-shadow: 0 0 16px #4e9af1, 0 0 8px #fff;
+}
+
+body.dark-mode .navbar-custom,
+body.dark-mode .post-preview,
+body.dark-mode .blog-post,
+body.dark-mode .container-md,
+body.dark-mode .container-fluid {
   box-shadow: 0 4px 32px rgba(26, 115, 232, 0.08), 0 1.5px 8px rgba(0,0,0,0.25);
 }
 
-/* Add a neon effect to headings */
-h1, h2, h3, h4, h5, h6 {
+body.dark-mode h1, body.dark-mode h2, body.dark-mode h3,
+body.dark-mode h4, body.dark-mode h5, body.dark-mode h6 {
   color: #fff;
   text-shadow: 0 0 8px #1a73e8, 0 0 2px #fff;
 }
 
-/* Style code blocks for dark mode */
-pre, code, .highlight pre {
+body.dark-mode pre, body.dark-mode code, body.dark-mode .highlight pre {
   background: #23272e !important;
   color: #e4e6eb !important;
   border-radius: 0.5rem;
 }
 
-/* Add a glowing border to buttons */
-.btn, button, input[type="submit"] {
+body.dark-mode .btn, body.dark-mode button, body.dark-mode input[type="submit"] {
   border: 1px solid #1a73e8;
   background: #242526;
   color: #e4e6eb;
   box-shadow: 0 0 8px #1a73e8;
   transition: background 0.2s, box-shadow 0.2s;
 }
-.btn:hover, button:hover, input[type="submit"]:hover {
+body.dark-mode .btn:hover, body.dark-mode button:hover, body.dark-mode input[type="submit"]:hover {
   background: #1a73e8;
   color: #fff;
   box-shadow: 0 0 16px #4e9af1, 0 0 8px #fff;
 }
+

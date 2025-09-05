@@ -67,7 +67,7 @@ social-network-links:
 #  instagram: deanat78
 #  spotify: yourname
 #  telephone: +14159998888
-  steam: andrxs23
+  steam: 76561199063667859
 #  twitch: yourname
 #  yelp: yourname
 #  telegram: yourname
@@ -95,7 +95,7 @@ rss-description: This website is a virtual proof that I'm awesome
 # Select which social network share links to show in posts
 share-links-active:
   twitter: true
-  facebook: true
+  facebook: false
   linkedin: true
   vk: false
   reddit: false
