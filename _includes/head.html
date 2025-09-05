@@ -95,49 +95,47 @@
   {% if site.fb_app_id %}
   <meta property="fb:app_id" content="{{ site.fb_app_id }}">
   {% endif %}
-  {% if site.fb_app_id %}
-  {% if site.title %}app_id" content="{{ site.fb_app_id }}">
+  {% if site.title %}
   <meta property="og:site_name" content="{{ site.title }}">
   {% endif %}
-  {% if site.title %}
-  {%- capture img -%}site_name" content="{{ site.title }}">
+
+  {%- capture img -%}
     {%- if page.share-img -%}
       {{ page.share-img }}
     {%- elsif page.cover-img -%}
       {%- if page.cover-img.first -%}
         {{ page.cover-img[0].first.first }}
-      {%- else -%}.cover-img -%}
-        {{ page.cover-img }}first -%}
-      {%- endif -%}er-img[0].first.first }}
+      {%- else -%}
+        {{ page.cover-img }}
+      {%- endif -%}
     {%- elsif page.thumbnail-img -%}
       {{ page.thumbnail-img }}
     {%- elsif site.avatar -%}
-      {{ site.avatar }}bnail-img -%}
-    {% endif %}humbnail-img }}
-  {%- endcapture -%}vatar -%}
-  {%- assign img=img | strip -%}
+      {{ site.avatar }}
     {% endif %}
+  {%- endcapture -%}
+  {%- assign img = img | strip -%}
+
   <meta property="og:title" content="{{ title }}">
   <meta property="og:description" content="{{ description }}">
 
-  {% if img != "" %}:title" content="{{ title }}">
+  {% if img != "" %}
   <meta property="og:image" content="{{ img | absolute_url }}">
   {% endif %}
-  {% if img != "" %}
-  {% if page.id %}og:image" content="{{ img | absolute_url }}">
+
+  {% if page.id %}
   <meta property="og:type" content="article">
   {% if author != "" %}
   <meta property="og:article:author" content="{{ author }}">
-  {% endif %}rty="og:type" content="article">
+  {% endif %}
   <meta property="og:article:published_time" content="{{ page.date | date_to_xmlschema }}">
   <meta property="og:url" content="{{ page.url | absolute_url }}">
   <link rel="canonical" href="{{ page.url | absolute_url }}">
-  {% else %}erty="og:article:published_time" content="{{ page.date | date_to_xmlschema }}">
-  <meta property="og:type" content="website">l | absolute_url }}">
+  {% else %}
+  <meta property="og:type" content="website">
   <meta property="og:url" content="{{ page.url | absolute_url | strip_index }}">
   <link rel="canonical" href="{{ page.url | absolute_url | strip_index }}">
-  {% endif %}rty="og:type" content="website">
-  <meta property="og:url" content="{{ page.url | absolute_url | strip_index }}">
+  {% endif %}
 
   {% if img != "" and img != site.avatar %}
     <meta name="twitter:card" content="summary_large_image">
@@ -173,6 +171,5 @@
   <link rel="stylesheet" href="{{ '/assets/css/darkmode.css' | relative_url }}">
 
 
-</head>
 </head>
 
