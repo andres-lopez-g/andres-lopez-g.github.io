@@ -1,0 +1,97 @@
+/* Basic sections */
+.section {
+  margin: 2.5rem 0;
+}
+.section h2 {
+  font-size: 1.75rem;
+  margin-bottom: 0.75rem;
+}
+.section-subtitle {
+  color: var(--mid-col);
+  margin-top: -0.25rem;
+  margin-bottom: 1.25rem;
+}
+
+/* Repo grid */
+.repo-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 1rem;
+}
+.repo-card {
+  border: 1px solid var(--navbar-border-col);
+  background: var(--page-col);
+  border-radius: 0.5rem;
+  padding: 1rem;
+  transition: transform .15s ease, box-shadow .15s ease;
+}
+.repo-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 24px rgba(0,0,0,.08);
+}
+.repo-card h3 {
+  font-size: 1.05rem;
+  margin: 0 0 .35rem;
+}
+.repo-card p {
+  margin: .25rem 0 .75rem;
+  color: var(--mid-col);
+}
+.repo-meta {
+  display: flex;
+  gap: .75rem;
+  font-size: .9rem;
+  color: var(--mid-col);
+}
+.repo-meta i {
+  color: var(--mid-col);
+}
+
+/* Skeleton loading */
+.skeleton {
+  position: relative;
+  overflow: hidden;
+  min-height: 120px;
+}
+.skeleton::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, transparent, rgba(0,0,0,.04), transparent);
+  animation: shimmer 1.2s infinite;
+}
+@keyframes shimmer {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(100%); }
+}
+
+/* Chips */
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .5rem;
+  padding-left: 0;
+  list-style: none;
+}
+.chip {
+  border: 1px dashed var(--navbar-border-col);
+  color: var(--text-col);
+  padding: .35rem .6rem;
+  border-radius: 999px;
+  font-size: .9rem;
+  background: rgba(0,0,0,.02);
+}
+
+/* CTA area */
+.section-cta {
+  margin-top: 1rem;
+}
+
+/* Subtle entrance animation for page subtitle in header */
+.intro-header .page-heading .page-subheading {
+  animation: fadeUp .6s ease both;
+}
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(6px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
