@@ -1,45 +1,117 @@
 ---
 layout: page
-title: Mi sitio
-subtitle: Aquí puedes ver más información sobre mí
+title: Mi Portafolio
+subtitle: Construyendo software útil, simple y escalable
 language: es
 lang_ref: home
 css:
   - /assets/css/home.css
 js:
   - /assets/js/gh-repos.js
+  - /assets/js/portfolio-anim.js
 ---
 
-<section id="about" class="section">
-  <h2>Sobre mí</h2>
-  <p>
-    Soy Andrés Julián López, ingeniero informático apasionado por el desarrollo de software, Linux y los videojuegos.
-    Conoce más en <a href="{{ '/aboutme' | relative_url }}">esta página</a>.
-  </p>
+<section class="hero">
+  <div class="hero-text">
+    <h1>Andrés Julián López</h1>
+    <p class="hero-tagline">Ingeniero informático enfocado en <strong>Linux</strong>, <strong>Back-end</strong> y <strong>Automatización</strong>.</p>
+    <div class="hero-cta">
+      <a href="{{ '/aboutme' | relative_url }}" class="btn btn-primary">Sobre mí</a>
+      <a href="#contacto" class="btn btn-outline">Contacto</a>
+      <a href="#proyectos" class="btn btn-outline-alt">Proyectos</a>
+    </div>
+  </div>
 </section>
 
-<section id="repos" class="section">
-  <h2>Repositorios destacados</h2>
-  <p class="section-subtitle">Últimos proyectos de mi GitHub.</p>
+<section class="section" id="skills">
+  <h2>Habilidades Clave</h2>
+  <ul class="skill-groups">
+    <li>
+      <h3>Backend</h3>
+      <div class="badges">
+        <span>Node.js</span><span>Express</span><span>API Design</span><span>REST</span><span>MongoDB</span><span>PostgreSQL</span>
+      </div>
+    </li>
+    <li>
+      <h3>DevOps & Linux</h3>
+      <div class="badges">
+        <span>Linux</span><span>Bash</span><span>Containers</span><span>Automatización</span><span>Shell Scripts</span>
+      </div>
+    </li>
+    <li>
+      <h3>Frontend</h3>
+      <div class="badges">
+        <span>HTML5</span><span>CSS</span><span>Accesibilidad</span><span>UI Semántica</span>
+      </div>
+    </li>
+    <li>
+      <h3>Otras</h3>
+      <div class="badges">
+        <span>C++</span><span>Python</span><span>SQL</span><span>Diseño Limpio</span><span>Resolución de problemas</span>
+      </div>
+    </li>
+  </ul>
+</section>
+
+<section class="section" id="proyectos">
+  <h2>Proyectos Destacados</h2>
+  <p class="section-subtitle">Selección curada. Más abajo los repos recientes.</p>
+  <div class="featured-projects">
+    <article class="fproj">
+      <h3>Automatización CLI</h3>
+      <p>Herramientas de terminal para acelerar flujos de desarrollo y despliegue.</p>
+      <div class="tags"><span>CLI</span><span>Bash</span><span>Productividad</span></div>
+    </article>
+    <article class="fproj">
+      <h3>API de Servicios</h3>
+      <p>Arquitectura modular con autenticación, paginación y monitoreo.</p>
+      <div class="tags"><span>Node.js</span><span>REST</span><span>Escalabilidad</span></div>
+    </article>
+    <article class="fproj">
+      <h3>Dashboards Técnicos</h3>
+      <p>Paneles ligeros para visualizar métricas operativas.</p>
+      <div class="tags"><span>UX</span><span>Accesibilidad</span><span>Visualización</span></div>
+    </article>
+  </div>
+</section>
+
+<section class="section" id="repos">
+  <h2>Actividad Reciente en GitHub</h2>
+  <p class="section-subtitle">Últimos repositorios relevantes.</p>
   <div id="gh-repos-list" class="repo-grid" aria-live="polite">
     <div class="repo-card skeleton"></div>
     <div class="repo-card skeleton"></div>
     <div class="repo-card skeleton"></div>
   </div>
   <div class="section-cta">
-    <a id="gh-profile-link" class="btn btn-primary" href="https://github.com/andres-lopez-g" target="_blank" rel="noopener">Ver todos en GitHub</a>
+    <a id="gh-profile-link" class="btn btn-primary" href="https://github.com/andres-lopez-g" target="_blank" rel="noopener">Ver todo</a>
   </div>
 </section>
 
-<section id="fun" class="section">
-  <h2>Lo que me gusta construir</h2>
-  <ul class="chips">
-    <li class="chip">Web</li>
-    <li class="chip">Linux</li>
-    <li class="chip">Back-end</li>
-    <li class="chip">Automatización</li>
-    <li class="chip">CLI</li>
-  </ul>
-  <p class="small-muted">Tip: activa el modo oscuro con el botón flotante para ver el efecto de partículas.</p>
+<section class="section" id="experiencia">
+  <h2>Experiencia & Trayectoria</h2>
+  <div class="timeline">
+    <div class="t-item">
+      <div class="t-point"></div>
+      <h4>2024 - Actual</h4>
+      <p>Proyectos personales de automatización y APIs; enfoque en buenas prácticas y mantenibilidad.</p>
+    </div>
+    <div class="t-item">
+      <div class="t-point"></div>
+      <h4>2023</h4>
+      <p>Consolidación de habilidades en Linux, scripting y bases de datos.</p>
+    </div>
+    <div class="t-item">
+      <div class="t-point"></div>
+      <h4>Inicio</h4>
+      <p>Interés en ingeniería, lógica y resolución de problemas aplicado a software.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="contacto">
+  <h2>Contacto</h2>
+  <p class="section-subtitle">Abierto a colaborar o conversar.</p>
+  {% include social-networks-links.html %}
 </section>
 

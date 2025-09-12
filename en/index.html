@@ -1,7 +1,7 @@
 ---
 layout: page
-title: My site
-subtitle: Here you can find more information about me
+title: Portfolio
+subtitle: Building useful, simple and scalable software
 language: en
 lang_ref: home
 permalink: /en/
@@ -9,37 +9,109 @@ css:
   - /assets/css/home.css
 js:
   - /assets/js/gh-repos.js
+  - /assets/js/portfolio-anim.js
 ---
 
-<section id="about" class="section">
-  <h2>About me</h2>
-  <p>
-    I’m Andrés Julián López, a computer engineer passionate about software development, Linux, and video games.
-    Learn more <a href="{{ '/en/aboutme' | relative_url }}">on this page</a>.
-  </p>
+<section class="hero">
+  <div class="hero-text">
+    <h1>Andrés Julián López</h1>
+    <p class="hero-tagline">Computer engineer focused on <strong>Linux</strong>, <strong>Back-end</strong> and <strong>Automation</strong>.</p>
+    <div class="hero-cta">
+      <a href="{{ '/en/aboutme' | relative_url }}" class="btn btn-primary">About</a>
+      <a href="#contact" class="btn btn-outline">Contact</a>
+      <a href="#projects" class="btn btn-outline-alt">Projects</a>
+    </div>
+  </div>
 </section>
 
-<section id="repos" class="section">
-  <h2>Featured repositories</h2>
-  <p class="section-subtitle">Latest projects from my GitHub.</p>
+<section class="section" id="skills">
+  <h2>Core Skills</h2>
+  <ul class="skill-groups">
+    <li>
+      <h3>Backend</h3>
+      <div class="badges">
+        <span>Node.js</span><span>Express</span><span>API Design</span><span>REST</span><span>MongoDB</span><span>PostgreSQL</span>
+      </div>
+    </li>
+    <li>
+      <h3>DevOps & Linux</h3>
+      <div class="badges">
+        <span>Linux</span><span>Bash</span><span>Containers</span><span>Automation</span><span>Scripting</span>
+      </div>
+    </li>
+    <li>
+      <h3>Frontend</h3>
+      <div class="badges">
+        <span>HTML5</span><span>CSS</span><span>Accessibility</span><span>Semantic UI</span>
+      </div>
+    </li>
+    <li>
+      <h3>Other</h3>
+      <div class="badges">
+        <span>C++</span><span>Python</span><span>SQL</span><span>Clean Design</span><span>Problem Solving</span>
+      </div>
+    </li>
+  </ul>
+</section>
+
+<section class="section" id="projects">
+  <h2>Featured Projects</h2>
+  <p class="section-subtitle">Curated selection. Recent repos below.</p>
+  <div class="featured-projects">
+    <article class="fproj">
+      <h3>CLI Automation</h3>
+      <p>Terminal utilities to speed up development & deployment workflows.</p>
+      <div class="tags"><span>CLI</span><span>Bash</span><span>Productivity</span></div>
+    </article>
+    <article class="fproj">
+      <h3>Service API</h3>
+      <p>Modular architecture with auth, pagination and monitoring.</p>
+      <div class="tags"><span>Node.js</span><span>REST</span><span>Scalability</span></div>
+    </article>
+    <article class="fproj">
+      <h3>Technical Dashboards</h3>
+      <p>Lightweight dashboards to visualize operational metrics.</p>
+      <div class="tags"><span>UX</span><span>Accessibility</span><span>Visualization</span></div>
+    </article>
+  </div>
+</section>
+
+<section class="section" id="repos">
+  <h2>Recent GitHub Activity</h2>
+  <p class="section-subtitle">Latest relevant repositories.</p>
   <div id="gh-repos-list" class="repo-grid" aria-live="polite">
     <div class="repo-card skeleton"></div>
     <div class="repo-card skeleton"></div>
     <div class="repo-card skeleton"></div>
   </div>
   <div class="section-cta">
-    <a id="gh-profile-link" class="btn btn-primary" href="https://github.com/andres-lopez-g" target="_blank" rel="noopener">See all on GitHub</a>
+    <a id="gh-profile-link" class="btn btn-primary" href="https://github.com/andres-lopez-g" target="_blank" rel="noopener">View all</a>
   </div>
 </section>
 
-<section id="fun" class="section">
-  <h2>What I like to build</h2>
-  <ul class="chips">
-    <li class="chip">Web</li>
-    <li class="chip">Linux</li>
-    <li class="chip">Back-end</li>
-    <li class="chip">Automation</li>
-    <li class="chip">CLI</li>
-  </ul>
-  <p class="small-muted">Tip: toggle dark mode with the floating button to enjoy the particles.</p>
+<section class="section" id="experience">
+  <h2>Timeline</h2>
+  <div class="timeline">
+    <div class="t-item">
+      <div class="t-point"></div>
+      <h4>2024 - Now</h4>
+      <p>Personal automation & API projects emphasizing maintainability.</p>
+    </div>
+    <div class="t-item">
+      <div class="t-point"></div>
+      <h4>2023</h4>
+      <p>Strengthened Linux, scripting, databases.</p>
+    </div>
+    <div class="t-item">
+      <div class="t-point"></div>
+      <h4>Early</h4>
+      <p>Interest in engineering logic applied to software craft.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="contact">
+  <h2>Contact</h2>
+  <p class="section-subtitle">Open to collaborate or chat.</p>
+  {% include social-networks-links.html %}
 </section>
