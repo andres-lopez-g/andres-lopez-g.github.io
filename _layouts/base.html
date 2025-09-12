@@ -71,26 +71,15 @@ site-css:
     // Dark mode toggle logic
     const toggleBtn = document.getElementById('darkModeToggle');
 
-    // Ajusta el color de partículas según el modo
-    function setParticlesColor(hex) {
-      if (window.pJSDom && pJSDom.length) {
-        const p = pJSDom[0].pJS;
-        if (p?.particles?.color) p.particles.color.value = hex;
-        if (p?.fn?.particlesRefresh) p.fn.particlesRefresh();
-      }
-    }
-
     function applyDarkMode(on) {
       if (on) {
         document.body.classList.add('dark-mode');
         localStorage.setItem('darkMode', 'on');
         if (toggleBtn) toggleBtn.textContent = '☀️ Light Mode';
-        setParticlesColor('#4a4a4a'); // gris medio en oscuro
       } else {
         document.body.classList.remove('dark-mode');
         localStorage.setItem('darkMode', 'off');
         if (toggleBtn) toggleBtn.textContent = '🌙 Dark Mode';
-        setParticlesColor('#7d7d7d'); // gris suave en claro
       }
     }
 
