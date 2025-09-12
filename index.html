@@ -6,12 +6,15 @@ language: es
 lang_ref: home
 css:
   - /assets/css/home.css
+  - /assets/css/neo-theme.css
 js:
   - /assets/js/gh-repos.js
   - /assets/js/portfolio-anim.js
+  - /assets/js/theme-effects.js
 ---
 
-<section class="hero">
+<section class="hero neo-panel gradient-border">
+  <div class="hero-parallax-layer"></div>
   <div class="hero-text">
     <h1>Andrés Julián López</h1>
     <p class="hero-tagline">Ingeniero informático enfocado en <strong>Linux</strong>, <strong>Back-end</strong> y <strong>Automatización</strong>.</p>
@@ -25,7 +28,7 @@ js:
 
 <section class="section" id="skills">
   <h2>Habilidades Clave</h2>
-  <ul class="skill-groups">
+  <ul class="skill-groups reveal">
     <li>
       <h3>Backend</h3>
       <div class="badges">
@@ -53,29 +56,29 @@ js:
   </ul>
 </section>
 
-<section class="section" id="proyectos">
+<section class="section" id="proyectos" class="reveal">
   <h2>Proyectos Destacados</h2>
   <p class="section-subtitle">Selección curada. Más abajo los repos recientes.</p>
-  <div class="featured-projects">
-    <article class="fproj">
-      <h3>Automatización CLI</h3>
+  <div class="featured-projects reveal del-1">
+    <article class="fproj reveal del-1">
+      <h3 class="neo-heading">Automatización CLI</h3>
       <p>Herramientas de terminal para acelerar flujos de desarrollo y despliegue.</p>
       <div class="tags"><span>CLI</span><span>Bash</span><span>Productividad</span></div>
     </article>
-    <article class="fproj">
-      <h3>API de Servicios</h3>
+    <article class="fproj reveal del-2">
+      <h3 class="neo-heading">API de Servicios</h3>
       <p>Arquitectura modular con autenticación, paginación y monitoreo.</p>
       <div class="tags"><span>Node.js</span><span>REST</span><span>Escalabilidad</span></div>
     </article>
-    <article class="fproj">
-      <h3>Dashboards Técnicos</h3>
+    <article class="fproj reveal del-3">
+      <h3 class="neo-heading">Dashboards Técnicos</h3>
       <p>Paneles ligeros para visualizar métricas operativas.</p>
       <div class="tags"><span>UX</span><span>Accesibilidad</span><span>Visualización</span></div>
     </article>
   </div>
 </section>
 
-<section class="section" id="repos">
+<section class="section reveal" id="repos">
   <h2>Actividad Reciente en GitHub</h2>
   <p class="section-subtitle">Últimos repositorios relevantes.</p>
   <div id="gh-repos-list" class="repo-grid" aria-live="polite">
@@ -88,7 +91,7 @@ js:
   </div>
 </section>
 
-<section class="section" id="experiencia">
+<section class="section reveal" id="experiencia">
   <h2>Experiencia & Trayectoria</h2>
   <div class="timeline">
     <div class="t-item">
@@ -109,7 +112,7 @@ js:
   </div>
 </section>
 
-<section class="section" id="contacto">
+<section class="section reveal" id="contacto">
   <h2>Contacto</h2>
   <p class="section-subtitle">Abierto a colaborar o conversar.</p>
   {% include social-networks-links.html %}

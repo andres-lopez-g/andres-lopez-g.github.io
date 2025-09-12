@@ -7,12 +7,15 @@ lang_ref: home
 permalink: /en/
 css:
   - /assets/css/home.css
+  - /assets/css/neo-theme.css
 js:
   - /assets/js/gh-repos.js
   - /assets/js/portfolio-anim.js
+  - /assets/js/theme-effects.js
 ---
 
-<section class="hero">
+<section class="hero neo-panel gradient-border">
+  <div class="hero-parallax-layer"></div>
   <div class="hero-text">
     <h1>Andrés Julián López</h1>
     <p class="hero-tagline">Computer engineer focused on <strong>Linux</strong>, <strong>Back-end</strong> and <strong>Automation</strong>.</p>
@@ -26,7 +29,7 @@ js:
 
 <section class="section" id="skills">
   <h2>Core Skills</h2>
-  <ul class="skill-groups">
+  <ul class="skill-groups reveal">
     <li>
       <h3>Backend</h3>
       <div class="badges">
@@ -54,29 +57,29 @@ js:
   </ul>
 </section>
 
-<section class="section" id="projects">
+<section class="section" id="projects" class="reveal">
   <h2>Featured Projects</h2>
   <p class="section-subtitle">Curated selection. Recent repos below.</p>
-  <div class="featured-projects">
-    <article class="fproj">
-      <h3>CLI Automation</h3>
+  <div class="featured-projects reveal del-1">
+    <article class="fproj reveal del-1">
+      <h3 class="neo-heading">CLI Automation</h3>
       <p>Terminal utilities to speed up development & deployment workflows.</p>
       <div class="tags"><span>CLI</span><span>Bash</span><span>Productivity</span></div>
     </article>
-    <article class="fproj">
-      <h3>Service API</h3>
+    <article class="fproj reveal del-2">
+      <h3 class="neo-heading">Service API</h3>
       <p>Modular architecture with auth, pagination and monitoring.</p>
       <div class="tags"><span>Node.js</span><span>REST</span><span>Scalability</span></div>
     </article>
-    <article class="fproj">
-      <h3>Technical Dashboards</h3>
+    <article class="fproj reveal del-3">
+      <h3 class="neo-heading">Technical Dashboards</h3>
       <p>Lightweight dashboards to visualize operational metrics.</p>
       <div class="tags"><span>UX</span><span>Accessibility</span><span>Visualization</span></div>
     </article>
   </div>
 </section>
 
-<section class="section" id="repos">
+<section class="section reveal" id="repos">
   <h2>Recent GitHub Activity</h2>
   <p class="section-subtitle">Latest relevant repositories.</p>
   <div id="gh-repos-list" class="repo-grid" aria-live="polite">
@@ -89,7 +92,7 @@ js:
   </div>
 </section>
 
-<section class="section" id="experience">
+<section class="section reveal" id="experience">
   <h2>Timeline</h2>
   <div class="timeline">
     <div class="t-item">
@@ -110,7 +113,7 @@ js:
   </div>
 </section>
 
-<section class="section" id="contact">
+<section class="section reveal" id="contact">
   <h2>Contact</h2>
   <p class="section-subtitle">Open to collaborate or chat.</p>
   {% include social-networks-links.html %}
