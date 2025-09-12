@@ -32,7 +32,7 @@ site-css:
   {% include nav.html %}
 
   <!-- Dark mode toggle button -->
-  <button id="darkModeToggle" style="position:fixed;bottom:2rem;right:2rem;z-index:1001;padding:0.7em 1.2em;background:#242526;color:#e4e6eb;border:1px solid #1a73e8;border-radius:2em;box-shadow:0 0 8px #1a73e8;cursor:pointer;transition:background 0.2s;">🌙 Dark Mode</button>
+  <button id="darkModeToggle" style="position:fixed;bottom:2rem;right:2rem;z-index:1001;padding:0.7em 1.2em;background:#1b1c1d;color:#e3e3e3;border:1px solid #2c2d2e;border-radius:2em;box-shadow:0 0 0 1px #2c2d2e,0 4px 14px -4px rgba(0,0,0,.6);cursor:pointer;transition:background .25s,box-shadow .4s;">🌙 Dark Mode</button>
 
   <!-- Particles.js background for flare -->
   <div id="particles-js"></div>
@@ -85,12 +85,12 @@ site-css:
         document.body.classList.add('dark-mode');
         localStorage.setItem('darkMode', 'on');
         if (toggleBtn) toggleBtn.textContent = '☀️ Light Mode';
-        setParticlesColor('#1a73e8'); // azul en oscuro
+        setParticlesColor('#4a4a4a'); // gris medio en oscuro
       } else {
         document.body.classList.remove('dark-mode');
         localStorage.setItem('darkMode', 'off');
         if (toggleBtn) toggleBtn.textContent = '🌙 Dark Mode';
-        setParticlesColor('#9aa4b2'); // gris suave en claro
+        setParticlesColor('#7d7d7d'); // gris suave en claro
       }
     }
 

@@ -143,6 +143,10 @@
 .fproj .tags span { font-size:.55rem; font-weight:700; padding:.35rem .5rem; background: var(--navbar-col); border:1px solid var(--navbar-border-col); border-radius:.4rem; letter-spacing:.05em; opacity:.85; }
 .fproj .tags span:hover { opacity:1; border-color: var(--hover-col); }
 
+/* Micro interaction hover scale (works with tilt) */
+.fproj, .repo-card { transition: transform .45s cubic-bezier(.16,.8,.31,1), box-shadow .45s; }
+.fproj:hover, .repo-card:hover { transform:translateY(-6px) scale(1.012); }
+
 /* Timeline */
 .timeline { position:relative; margin:1.5rem 0 0; padding-left:1.25rem; border-left:3px solid var(--navbar-border-col); }
 .t-item { position:relative; margin:0 0 1.75rem; animation: fadeSlide .7s ease both; }
