@@ -8,18 +8,24 @@ css:
   - /assets/css/home.css
   - /assets/css/neo-theme.css
   - /assets/css/darkmode.css
+  - /assets/css/particles.css
 js:
+  - https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js
+  - /assets/js/particles-config.js
+  - /assets/js/typing-effect.js
   - /assets/js/gh-repos.js
   - /assets/js/portfolio-anim.js
   - /assets/js/theme-effects.js
   - /assets/js/micro-interactions.js
 ---
 
+<div id="particles-js"></div>
+
 <section class="hero neo-panel gradient-border">
   <div class="hero-parallax-layer"></div>
   <div class="hero-text">
-    <h1>Andrés Julián López</h1>
-    <p class="hero-tagline">Ingeniero informático enfocado en <strong>Linux</strong>, <strong>Back-end</strong> y <strong>Automatización</strong>.</p>
+    <h1><span class="typing-text">Andrés Julián López</span></h1>
+    <p class="hero-tagline">Ingeniero informático enfocado en <strong>Linux</strong>, <strong>Back-end</strong>, <strong>Machine Learning</strong> y <strong>Automatización</strong>.</p>
     <div class="hero-cta">
       <a href="{{ '/aboutme' | relative_url }}" class="btn btn-outline">Sobre mí</a>
       <a href="#contacto" class="btn btn-outline">Contacto</a>
@@ -34,25 +40,25 @@ js:
     <li>
       <h3>Backend</h3>
       <div class="badges">
-        <span>Node.js</span><span>Express</span><span>API Design</span><span>REST</span><span>MongoDB</span><span>PostgreSQL</span>
+        <span><i class="fab fa-node-js"></i> Node.js</span><span>Express</span><span>API Design</span><span>REST</span><span><i class="fas fa-database"></i> MongoDB</span><span><i class="fas fa-database"></i> PostgreSQL</span>
       </div>
     </li>
     <li>
       <h3>DevOps & Linux</h3>
       <div class="badges">
-        <span>Linux</span><span>Bash</span><span>Containers</span><span>Automatización</span><span>Shell Scripts</span>
+        <span><i class="fab fa-linux"></i> Linux</span><span><i class="fas fa-terminal"></i> Bash</span><span><i class="fas fa-box"></i> Containers</span><span>Automatización</span><span>Shell Scripts</span><span><i class="fab fa-git-alt"></i> Git</span>
       </div>
     </li>
     <li>
-      <h3>Frontend</h3>
+      <h3>Frontend & Design</h3>
       <div class="badges">
-        <span>HTML5</span><span>CSS</span><span>Accesibilidad</span><span>UI Semántica</span>
+        <span><i class="fab fa-html5"></i> HTML5</span><span><i class="fab fa-css3-alt"></i> CSS</span><span><i class="fab fa-js"></i> JavaScript</span><span>Accesibilidad</span><span>UI/UX</span>
       </div>
     </li>
     <li>
-      <h3>Otras</h3>
+      <h3>Otras Tecnologías</h3>
       <div class="badges">
-        <span>C++</span><span>Python</span><span>SQL</span><span>Diseño Limpio</span><span>Resolución de problemas</span>
+        <span>C++</span><span><i class="fab fa-python"></i> Python</span><span>SQL</span><span>Machine Learning</span><span>IoT</span><span>MicroPython</span>
       </div>
     </li>
   </ul>
@@ -60,22 +66,49 @@ js:
 
 <section class="section" id="proyectos" class="reveal">
   <h2>Proyectos Destacados</h2>
-  <p class="section-subtitle">Selección curada. Más abajo los repos recientes.</p>
+  <p class="section-subtitle">Selección curada de mis proyectos más recientes.</p>
   <div class="featured-projects reveal del-1">
-    <article class="fproj reveal del-1" data-tilt>
-      <h3 class="neo-heading">Automatización CLI</h3>
-      <p>Herramientas de terminal para acelerar flujos de desarrollo y despliegue.</p>
-      <div class="tags"><span>CLI</span><span>Bash</span><span>Productividad</span></div>
+    <article class="fproj reveal del-1 glow-card" data-tilt>
+      <div class="project-icon"><i class="fas fa-car"></i></div>
+      <h3 class="neo-heading">CarScan</h3>
+      <p>Sistema de identificación vehicular con visión por computadora para automatizar registro y control de acceso.</p>
+      <div class="tags"><span>HTML</span><span>Computer Vision</span><span>IoT</span></div>
+      <a href="https://github.com/andres-lopez-g/CarScan" target="_blank" rel="noopener" class="project-link"><i class="fab fa-github"></i> Ver código</a>
     </article>
-    <article class="fproj reveal del-2" data-tilt>
-      <h3 class="neo-heading">API de Servicios</h3>
-      <p>Arquitectura modular con autenticación, paginación y monitoreo.</p>
-      <div class="tags"><span>Node.js</span><span>REST</span><span>Escalabilidad</span></div>
+    <article class="fproj reveal del-2 glow-card" data-tilt>
+      <div class="project-icon"><i class="fas fa-robot"></i></div>
+      <h3 class="neo-heading">AsisT</h3>
+      <p>Asistente inteligente todo-en-uno para gestión financiera, archivos y planificación diaria enfocado en la productividad.</p>
+      <div class="tags"><span>JavaScript</span><span>Node.js</span><span>AI</span></div>
+      <a href="https://github.com/andres-lopez-g/AsisT" target="_blank" rel="noopener" class="project-link"><i class="fab fa-github"></i> Ver código</a>
     </article>
-    <article class="fproj reveal del-3" data-tilt>
-      <h3 class="neo-heading">Dashboards Técnicos</h3>
-      <p>Paneles ligeros para visualizar métricas operativas.</p>
-      <div class="tags"><span>UX</span><span>Accesibilidad</span><span>Visualización</span></div>
+    <article class="fproj reveal del-3 glow-card" data-tilt>
+      <div class="project-icon"><i class="fas fa-eye-slash"></i></div>
+      <h3 class="neo-heading">ML Face Censor</h3>
+      <p>Herramienta de censura de rostros usando Machine Learning para protección de privacidad en imágenes.</p>
+      <div class="tags"><span>Python</span><span>ML</span><span>OpenCV</span></div>
+      <a href="https://github.com/andres-lopez-g/ml-face-censor" target="_blank" rel="noopener" class="project-link"><i class="fab fa-github"></i> Ver código</a>
+    </article>
+    <article class="fproj reveal del-1 glow-card" data-tilt>
+      <div class="project-icon"><i class="fas fa-compress"></i></div>
+      <h3 class="neo-heading">Huffman Compression</h3>
+      <p>Implementación del algoritmo de compresión Huffman en C++ para codificación eficiente de datos.</p>
+      <div class="tags"><span>C++</span><span>Algoritmos</span><span>Compresión</span></div>
+      <a href="https://github.com/andres-lopez-g/huffman-compression" target="_blank" rel="noopener" class="project-link"><i class="fab fa-github"></i> Ver código</a>
+    </article>
+    <article class="fproj reveal del-2 glow-card" data-tilt>
+      <div class="project-icon"><i class="fas fa-cloud"></i></div>
+      <h3 class="neo-heading">ESP32 Meteorología</h3>
+      <p>Estación meteorológica con ESP32 y MicroPython que envía datos a ThingSpeak para monitoreo ambiental.</p>
+      <div class="tags"><span>Python</span><span>IoT</span><span>Sensores</span></div>
+      <a href="https://github.com/andres-lopez-g/esp32-meteorologia" target="_blank" rel="noopener" class="project-link"><i class="fab fa-github"></i> Ver código</a>
+    </article>
+    <article class="fproj reveal del-3 glow-card" data-tilt>
+      <div class="project-icon"><i class="fas fa-database"></i></div>
+      <h3 class="neo-heading">Torre de Babel</h3>
+      <p>Juego educativo construido con Python y SQL para aprender sobre lenguajes de programación de forma interactiva.</p>
+      <div class="tags"><span>Python</span><span>SQL</span><span>Educación</span></div>
+      <a href="https://github.com/andres-lopez-g/torredebabel" target="_blank" rel="noopener" class="project-link"><i class="fab fa-github"></i> Ver código</a>
     </article>
   </div>
 </section>
@@ -84,6 +117,9 @@ js:
   <h2>Actividad Reciente en GitHub</h2>
   <p class="section-subtitle">Últimos repositorios relevantes.</p>
   <div id="gh-repos-list" class="repo-grid" aria-live="polite">
+    <div class="repo-card skeleton"></div>
+    <div class="repo-card skeleton"></div>
+    <div class="repo-card skeleton"></div>
     <div class="repo-card skeleton"></div>
     <div class="repo-card skeleton"></div>
     <div class="repo-card skeleton"></div>
@@ -98,13 +134,23 @@ js:
   <div class="timeline">
     <div class="t-item">
       <div class="t-point"></div>
-      <h4>2024 - Actual</h4>
+      <h4>2026 - Actual</h4>
+      <p>Desarrollo de proyectos avanzados: sistemas de visión por computadora, asistentes inteligentes con IA, y soluciones IoT con ESP32 y MicroPython.</p>
+    </div>
+    <div class="t-item">
+      <div class="t-point"></div>
+      <h4>2025</h4>
+      <p>Implementación de algoritmos de compresión, machine learning para procesamiento de imágenes, y proyectos educativos con bases de datos poliglotas.</p>
+    </div>
+    <div class="t-item">
+      <div class="t-point"></div>
+      <h4>2024</h4>
       <p>Proyectos personales de automatización y APIs; enfoque en buenas prácticas y mantenibilidad.</p>
     </div>
     <div class="t-item">
       <div class="t-point"></div>
       <h4>2023</h4>
-      <p>Consolidación de habilidades en Linux, scripting y bases de datos.</p>
+      <p>Consolidación de habilidades en Linux, scripting, bases de datos y desarrollo backend.</p>
     </div>
     <div class="t-item">
       <div class="t-point"></div>

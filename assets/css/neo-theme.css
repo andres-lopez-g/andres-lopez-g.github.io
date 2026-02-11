@@ -52,12 +52,45 @@ body.neo-theme a:hover { color: var(--neo-accent-alt); }
 .reveal.del-2 { transition-delay:.24s; }
 .reveal.del-3 { transition-delay:.36s; }
 
+/* Staggered animation for grid items */
+.featured-projects .fproj:nth-child(1) { transition-delay: 0.1s; }
+.featured-projects .fproj:nth-child(2) { transition-delay: 0.2s; }
+.featured-projects .fproj:nth-child(3) { transition-delay: 0.3s; }
+.featured-projects .fproj:nth-child(4) { transition-delay: 0.4s; }
+.featured-projects .fproj:nth-child(5) { transition-delay: 0.5s; }
+.featured-projects .fproj:nth-child(6) { transition-delay: 0.6s; }
+
 /* Project card upgrades */
 body.neo-theme .fproj { background:var(--neo-surface); border:1px solid var(--neo-border); box-shadow:0 8px 32px -10px rgba(0,0,0,.55); }
 body.neo-theme .fproj:hover { box-shadow:0 12px 48px -8px rgba(0,0,0,.7),0 0 0 1px var(--neo-accent); }
 body.neo-theme .fproj h3 { color:#fff; }
 body.neo-theme .fproj p { color:var(--neo-txt-dim); }
 body.neo-theme .fproj .tags span { background:rgba(255,255,255,0.08); border:1px solid var(--neo-border); }
+
+/* Project icon in neo theme */
+body.neo-theme .project-icon {
+  background: linear-gradient(135deg, var(--neo-accent), var(--neo-accent-alt));
+  box-shadow: 0 4px 16px rgba(26, 115, 232, 0.5);
+}
+
+body.neo-theme .project-link {
+  background: linear-gradient(135deg, var(--neo-accent), var(--neo-accent-alt));
+  box-shadow: 0 2px 8px rgba(26, 115, 232, 0.3);
+}
+
+body.neo-theme .project-link:hover {
+  box-shadow: 0 4px 16px rgba(26, 115, 232, 0.6);
+  transform: translateY(-2px) scale(1.02);
+}
+
+/* Enhanced glow for neo theme */
+body.neo-theme .glow-card::before {
+  background: linear-gradient(45deg, var(--neo-accent), var(--neo-accent-alt), var(--neo-accent-warm));
+}
+
+body.neo-theme .glow-card:hover::before {
+  opacity: 0.8;
+}
 
 /* Skills badges in neo */
 body.neo-theme .badges span { background:rgba(255,255,255,0.08); border:1px solid var(--neo-border); }

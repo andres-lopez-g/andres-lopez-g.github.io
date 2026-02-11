@@ -1,0 +1,23 @@
+/* Particles background container */
+#particles-js {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  opacity: 0.6;
+}
+
+body.dark-mode #particles-js,
+body.neo-theme #particles-js {
+  opacity: 0.8;
+}
+
+/* Ensure particles don't interfere with content */
+#particles-js canvas {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+}

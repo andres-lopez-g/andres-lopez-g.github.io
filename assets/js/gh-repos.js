@@ -28,11 +28,13 @@
 
   function createCard(r) {
     const desc = r.description ? r.description.replace(/</g, '&lt;') : '';
+    const lang = r.language ? `<span class="repo-lang" title="${r.language}"><i class="fas fa-code"></i> ${r.language}</span>` : '';
     return `
-      <article class="repo-card">
+      <article class="repo-card glow-card" data-tilt>
         <h3><a href="${r.html_url}" target="_blank" rel="noopener">${r.name}</a></h3>
         ${desc ? `<p>${desc}</p>` : ''}
         <div class="repo-meta">
+          ${lang}
           <span title="${r.stargazers_count} ${t.stars}"><i class="fa fa-star"></i> ${r.stargazers_count}</span>
           <span title="${r.forks_count} ${t.forks}"><i class="fa fa-code-fork"></i> ${r.forks_count}</span>
           <span title="${t.updated} ${fmtDate(r.pushed_at)}"><i class="fa fa-clock"></i> ${fmtDate(r.pushed_at)}</span>
@@ -52,9 +54,9 @@
 
       // Heurística: repos no archivados, con algo de actividad; ordenar por estrellas y actualización
       const items = all
-        .filter(r => !r.archived)
+        .filter(r => !r.archived && !r.fork)
         .sort((a, b) => (b.stargazers_count - a.stargazers_count) || (new Date(b.pushed_at) - new Date(a.pushed_at)))
-        .slice(0, 6);
+        .slice(0, 9);
 
       container.innerHTML = items.length
         ? items.map(createCard).join('')
