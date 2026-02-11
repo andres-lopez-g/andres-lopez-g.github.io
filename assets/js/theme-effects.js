@@ -60,4 +60,17 @@
   const darkBtn = d.getElementById('darkModeToggle');
   if(darkBtn){ darkBtn.addEventListener('click', () => setTimeout(syncNeo, 30)); }
 
+  // Smooth scroll for anchor links
+  d.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+      const href = this.getAttribute('href');
+      if(href === '#') return;
+      e.preventDefault();
+      const target = d.querySelector(href);
+      if(target) {
+        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    });
+  });
+
 })();
