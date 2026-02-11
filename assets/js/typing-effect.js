@@ -7,13 +7,13 @@ document.addEventListener('DOMContentLoaded', function() {
   typingElement.textContent = '';
   typingElement.style.display = 'inline-block';
   
-  let i = 0;
+  let charIndex = 0;
   const speed = 80; // milliseconds per character
   
   function type() {
-    if (i < text.length) {
-      typingElement.textContent += text.charAt(i);
-      i++;
+    if (charIndex < text.length) {
+      typingElement.textContent += text.charAt(charIndex);
+      charIndex++;
       setTimeout(type, speed);
     } else {
       typingElement.classList.add('typing-complete');
