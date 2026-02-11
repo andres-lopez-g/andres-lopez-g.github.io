@@ -59,6 +59,31 @@ body.neo-theme .fproj h3 { color:#fff; }
 body.neo-theme .fproj p { color:var(--neo-txt-dim); }
 body.neo-theme .fproj .tags span { background:rgba(255,255,255,0.08); border:1px solid var(--neo-border); }
 
+/* Project icon in neo theme */
+body.neo-theme .project-icon {
+  background: linear-gradient(135deg, var(--neo-accent), var(--neo-accent-alt));
+  box-shadow: 0 4px 16px rgba(26, 115, 232, 0.5);
+}
+
+body.neo-theme .project-link {
+  background: linear-gradient(135deg, var(--neo-accent), var(--neo-accent-alt));
+  box-shadow: 0 2px 8px rgba(26, 115, 232, 0.3);
+}
+
+body.neo-theme .project-link:hover {
+  box-shadow: 0 4px 16px rgba(26, 115, 232, 0.6);
+  transform: translateY(-2px) scale(1.02);
+}
+
+/* Enhanced glow for neo theme */
+body.neo-theme .glow-card::before {
+  background: linear-gradient(45deg, var(--neo-accent), var(--neo-accent-alt), var(--neo-accent-warm));
+}
+
+body.neo-theme .glow-card:hover::before {
+  opacity: 0.8;
+}
+
 /* Skills badges in neo */
 body.neo-theme .badges span { background:rgba(255,255,255,0.08); border:1px solid var(--neo-border); }
 

@@ -42,9 +42,17 @@
   gap: .75rem;
   font-size: .9rem;
   color: var(--mid-col);
+  flex-wrap: wrap;
 }
 .repo-meta i {
   color: var(--mid-col);
+}
+.repo-lang {
+  font-weight: 600;
+  color: var(--link-col);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
 }
 
 /* Skeleton loading */
@@ -143,9 +151,108 @@
 .fproj .tags span { font-size:.55rem; font-weight:700; padding:.35rem .5rem; background: var(--navbar-col); border:1px solid var(--navbar-border-col); border-radius:.4rem; letter-spacing:.05em; opacity:.85; }
 .fproj .tags span:hover { opacity:1; border-color: var(--hover-col); }
 
+/* Project icon */
+.project-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  background: linear-gradient(135deg, var(--link-col), var(--hover-col));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 0.75rem;
+  font-size: 1.5rem;
+  color: white;
+  box-shadow: 0 4px 12px rgba(0, 138, 255, 0.3);
+}
+
+/* Project link */
+.project-link {
+  margin-top: 0.75rem;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  background: var(--link-col);
+  color: white !important;
+  text-align: center;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.85rem;
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  justify-content: center;
+}
+
+.project-link:hover {
+  background: var(--hover-col);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 138, 255, 0.4);
+}
+
+/* Glow card effect */
+.glow-card {
+  position: relative;
+  overflow: visible;
+}
+
+.glow-card::before {
+  content: '';
+  position: absolute;
+  inset: -2px;
+  border-radius: inherit;
+  background: linear-gradient(45deg, var(--link-col), var(--hover-col), var(--link-col));
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  z-index: -1;
+  filter: blur(8px);
+}
+
+.glow-card:hover::before {
+  opacity: 0.6;
+  animation: glowPulse 2s ease infinite;
+}
+
+@keyframes glowPulse {
+  0%, 100% { opacity: 0.4; }
+  50% { opacity: 0.8; }
+}
+
 /* Micro interaction hover scale (works with tilt) */
 .fproj, .repo-card { transition: transform .45s cubic-bezier(.16,.8,.31,1), box-shadow .45s; }
 .fproj:hover, .repo-card:hover { transform:translateY(-6px) scale(1.012); }
+
+/* Typing animation effect */
+.typing-text {
+  border-right: 3px solid var(--link-col);
+  padding-right: 4px;
+  animation: blink 0.7s steps(1) infinite;
+}
+
+.typing-text.typing-complete {
+  border-right: none;
+  animation: none;
+}
+
+@keyframes blink {
+  50% { border-color: transparent; }
+}
+
+/* Smooth scroll */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Enhanced badges with icons */
+.badges span {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+.badges span i {
+  font-size: 0.85rem;
+}
 
 /* Timeline */
 .timeline { position:relative; margin:1.5rem 0 0; padding-left:1.25rem; border-left:3px solid var(--navbar-border-col); }
