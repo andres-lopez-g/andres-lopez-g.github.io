@@ -16,15 +16,10 @@
   --body-font: 'Lora', 'Times New Roman', serif;
 }
 
-/* Light background texture */
+/* Light background */
 body:not(.dark-mode)::before {
-  content:""; position:fixed; inset:0; pointer-events:none; opacity:.55;
-  background:
-    radial-gradient(circle at 60% 40%, rgba(0,0,0,0.04), transparent 60%),
-    repeating-linear-gradient(45deg, rgba(0,0,0,0.015) 0 2px, transparent 2px 4px);
-  mix-blend-mode:multiply; animation: grain 14s linear infinite;
+  display: none;
 }
-@keyframes grain { from {transform:translate(0,0);} to {transform:translate(-300px,150px);} }
 
 /* === Dark Grayscale Mode Overrides === */
 body.dark-mode {
@@ -40,16 +35,11 @@ body.dark-mode {
   --footer-link-col: #cccccc;
   --footer-hover-col: #fff;
   --mid-col: #8a8f93;
-  background: radial-gradient(circle at 30% 30%, #121314, #0c0d0e 55%, #080809);
+  background: #121314;
 }
 body.dark-mode::before {
-  content:""; position:fixed; inset:0; pointer-events:none; opacity:.5;
-  background:
-    radial-gradient(circle at 70% 65%, rgba(255,255,255,0.05), transparent 60%),
-    repeating-linear-gradient(45deg, rgba(255,255,255,0.03) 0 2px, transparent 2px 4px);
-  mix-blend-mode:overlay; animation: drift 18s linear infinite;
+  display: none;
 }
-@keyframes drift { from {transform:translate(0,0);} to {transform:translate(240px,-140px);} }
 
 /* Link neutral look */
 body.dark-mode a, body.dark-mode .navbar-custom .navbar-nav .nav-link { color:#c9c9c9; text-shadow:none; transition:color .25s; }

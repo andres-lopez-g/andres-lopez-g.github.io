@@ -1,6 +1,6 @@
 /* Neo Theme: Futuristic gradient surfaces, glass, subtle neon accents */
 :root {
-  --neo-bg: radial-gradient(circle at 20% 20%, #121826, #0b0f17 60%);
+  --neo-bg: #0b0f17;
   --neo-surface: rgba(255,255,255,0.04);
   --neo-border: rgba(255,255,255,0.12);
   --neo-border-strong: rgba(255,255,255,0.28);
@@ -25,25 +25,19 @@ body.neo-theme a { color: var(--neo-accent); }
 body.neo-theme a:hover { color: var(--neo-accent-alt); }
 
 /* Glass panels */
-.neo-panel { backdrop-filter: blur(20px) saturate(1.4); background: linear-gradient(135deg, rgba(255,255,255,0.07), rgba(255,255,255,0.02)); border:1px solid var(--neo-border); border-radius: var(--neo-radius); position:relative; overflow:hidden; }
-.neo-panel::before { content:""; position:absolute; inset:0; background: linear-gradient(120deg, rgba(255,255,255,0.08), transparent 60%); mix-blend-mode: overlay; pointer-events:none; }
+.neo-panel { background: var(--page-col); border:1px solid var(--navbar-border-col); border-radius: var(--neo-radius); position:relative; overflow:hidden; }
 
 /* Gradient border utility */
 .gradient-border { position:relative; }
-.gradient-border::after { content:""; position:absolute; inset:0; padding:1px; border-radius:inherit; background:linear-gradient(120deg,var(--neo-accent),var(--neo-accent-alt),var(--neo-accent-warm)); -webkit-mask: linear-gradient(#000,#000) content-box, linear-gradient(#000,#000); mask: linear-gradient(#000,#000) content-box, linear-gradient(#000,#000); -webkit-mask-composite: xor; mask-composite: exclude; pointer-events:none; animation: neoRotate 12s linear infinite; opacity:.9; }
-@keyframes neoRotate { 0%{filter:hue-rotate(0deg);} 100%{filter:hue-rotate(360deg);} }
 
 /* Animated heading underline */
 .neo-heading { position:relative; display:inline-block; }
-.neo-heading::after { content:""; position:absolute; left:0; bottom:-6px; width:100%; height:3px; background:linear-gradient(90deg,var(--neo-accent),var(--neo-accent-alt)); transform:scaleX(0); transform-origin:left; transition:transform .6s cubic-bezier(.16,.8,.31,1); }
+.neo-heading::after { content:""; position:absolute; left:0; bottom:-6px; width:100%; height:2px; background:var(--neo-accent); transform:scaleX(0); transform-origin:left; transition:transform .6s cubic-bezier(.16,.8,.31,1); }
 .neo-heading.in-view::after { transform:scaleX(1); }
 
 /* Fancy buttons */
-.btn-neo { position:relative; overflow:hidden; border:1px solid var(--neo-border-strong); color:var(--neo-txt); background:linear-gradient(135deg,rgba(255,255,255,0.07),rgba(255,255,255,0.02)); padding:.65rem 1.4rem; border-radius:2rem; font-weight:600; letter-spacing:.5px; backdrop-filter:blur(18px); transition:var(--neo-transition); }
+.btn-neo { position:relative; overflow:hidden; border:1px solid var(--neo-border-strong); color:var(--neo-txt); background:rgba(255,255,255,0.06); padding:.65rem 1.4rem; border-radius:2rem; font-weight:600; letter-spacing:.5px; transition:var(--neo-transition); }
 .btn-neo:hover { border-color:var(--neo-accent); color:#fff; box-shadow:0 4px 24px -4px rgba(26,115,232,0.55); }
-.btn-neo:before { content:""; position:absolute; top:0; left:-40%; width:40%; height:100%; background:linear-gradient(100deg,transparent,rgba(255,255,255,0.4),transparent); transform:skewX(-20deg) translateX(0); }
-.btn-neo:hover:before { animation: shine 1.1s ease; }
-@keyframes shine { from{transform:skewX(-20deg) translateX(0);} to{transform:skewX(-20deg) translateX(260%);} }
 
 /* Motion reveal variants */
 .reveal { opacity:0; transform:translateY(24px) scale(.98); filter:blur(6px); transition:1s cubic-bezier(.16,.8,.31,1); }
@@ -69,13 +63,11 @@ body.neo-theme .fproj .tags span { background:rgba(255,255,255,0.08); border:1px
 
 /* Project icon in neo theme */
 body.neo-theme .project-icon {
-  background: linear-gradient(135deg, var(--neo-accent), var(--neo-accent-alt));
-  box-shadow: 0 4px 16px rgba(26, 115, 232, 0.5);
+  background: var(--neo-accent);
 }
 
 body.neo-theme .project-link {
-  background: linear-gradient(135deg, var(--neo-accent), var(--neo-accent-alt));
-  box-shadow: 0 2px 8px rgba(26, 115, 232, 0.3);
+  background: var(--neo-accent);
 }
 
 body.neo-theme .project-link:hover {
@@ -85,7 +77,7 @@ body.neo-theme .project-link:hover {
 
 /* Enhanced glow for neo theme */
 body.neo-theme .glow-card::before {
-  background: linear-gradient(45deg, var(--neo-accent), var(--neo-accent-alt), var(--neo-accent-warm));
+  background: var(--neo-accent);
 }
 
 body.neo-theme .glow-card:hover::before {
@@ -100,11 +92,11 @@ body.neo-theme .timeline { border-left:3px solid var(--neo-accent-alt); }
 body.neo-theme .t-point { border-color:var(--neo-accent-alt); }
 
 /* Scroll progress bar */
-#scroll-progress { position:fixed; top:0; left:0; height:4px; width:0; background:linear-gradient(90deg,var(--neo-accent),var(--neo-accent-alt),var(--neo-accent-warm)); z-index:5000; box-shadow:0 0 0 1px rgba(255,255,255,0.15),0 2px 8px -2px rgba(0,0,0,.6); transition:width .15s linear; }
+#scroll-progress { position:fixed; top:0; left:0; height:4px; width:0; background:var(--neo-accent); z-index:5000; transition:width .15s linear; }
 
 /* Parallax hero accent layer */
-.hero-parallax-layer { position:absolute; inset:0; background:radial-gradient(circle at 70% 30%, rgba(138,92,246,0.35), transparent 60%), radial-gradient(circle at 25% 70%, rgba(26,115,232,0.35), transparent 65%); mix-blend-mode:overlay; pointer-events:none; opacity:.55; transition:transform .8s ease; }
-body.neo-theme .hero { background:linear-gradient(135deg, rgba(255,255,255,0.08), rgba(255,255,255,0.02)); border:1px solid var(--neo-border); }
+.hero-parallax-layer { position:absolute; inset:0; pointer-events:none; }
+body.neo-theme .hero { background:rgba(255,255,255,0.05); border:1px solid var(--neo-border); }
 
 /* Particle container layering fix */
 body.neo-theme #particles-js { mix-blend-mode:screen; }
@@ -115,7 +107,7 @@ body.neo-theme #particles-js { mix-blend-mode:screen; }
 }
 
 /* Utility: subtle grid background overlay */
-body.neo-theme::before { content:""; position:fixed; inset:0; background-image:linear-gradient(rgba(255,255,255,0.04) 1px, transparent 1px),linear-gradient(90deg, rgba(255,255,255,0.04) 1px, transparent 1px); background-size:50px 50px, 50px 50px; pointer-events:none; z-index:0; mask:radial-gradient(circle at 40% 40%, rgba(0,0,0,1), rgba(0,0,0,0.3)); }
+body.neo-theme::before { content:""; position:fixed; inset:0; background-image:linear-gradient(rgba(255,255,255,0.04) 1px, transparent 1px),linear-gradient(90deg, rgba(255,255,255,0.04) 1px, transparent 1px); background-size:50px 50px, 50px 50px; pointer-events:none; z-index:0; }
 
 /* Elevation utility */
 .neo-elevate { box-shadow:0 4px 22px -6px rgba(0,0,0,.6); }
