@@ -1,7 +1,8 @@
 
 
 (function () {
-  const GH_USER = '{{ site.github_username | default: site.github.owner_name | default: "andres-lopez-g" }}';
+  // Username is hardcoded because Jekyll does not process Liquid tags in JS files without front matter
+  const GH_USER = 'andres-lopez-g';
   const lang = (document.documentElement.getAttribute('lang') || 'en').toLowerCase().startsWith('es') ? 'es' : 'en';
   const t = {
     es: {

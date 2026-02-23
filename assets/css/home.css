@@ -109,19 +109,11 @@
 .hero {
   margin: 3rem 0 2rem;
   padding: 2.5rem 2rem;
-  background: linear-gradient(135deg, var(--page-col), rgba(0,0,0,0.02));
+  background: var(--page-col);
   border: 1px solid var(--navbar-border-col);
   border-radius: 1rem;
   position: relative;
   overflow: hidden;
-}
-.hero::after {
-  content:"";
-  position:absolute;
-  inset:0;
-  background: radial-gradient(circle at 85% 15%, var(--hover-col)15%, transparent 60%);
-  opacity:.08;
-  pointer-events:none;
 }
 .hero h1 { margin-top:0; font-size:2.4rem; }
 .hero-tagline { margin:.75rem 0 1.25rem; font-size:1.15rem; color: var(--mid-col); }
@@ -156,14 +148,13 @@
   width: 48px;
   height: 48px;
   border-radius: 12px;
-  background: linear-gradient(135deg, var(--link-col), var(--hover-col));
+  background: var(--link-col);
   display: flex;
   align-items: center;
   justify-content: center;
   margin-bottom: 0.75rem;
   font-size: 1.5rem;
   color: white;
-  box-shadow: 0 4px 12px rgba(0, 138, 255, 0.3);
 }
 
 /* Project link */
@@ -201,7 +192,7 @@
   position: absolute;
   inset: -2px;
   border-radius: inherit;
-  background: linear-gradient(45deg, var(--link-col), var(--hover-col), var(--link-col));
+  background: var(--link-col);
   opacity: 0;
   transition: opacity 0.4s ease;
   z-index: -1;
@@ -449,11 +440,7 @@ body.neo-theme .code-card-content { background: rgba(0,0,0,0.35); color: var(--n
   font-size: 2.6rem;
   font-weight: 800;
   line-height: 1;
-  color: var(--link-col); /* fallback for high-contrast / no-gradient */
-  background: linear-gradient(135deg, var(--link-col), var(--hover-col));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  color: var(--link-col);
   font-feature-settings: "tnum";
 }
 .stat-label {
@@ -468,11 +455,7 @@ body.neo-theme .stats-bar {
   border-color: var(--neo-border);
 }
 body.neo-theme .stat-number {
-  color: var(--neo-accent); /* fallback */
-  background: linear-gradient(135deg, var(--neo-accent), var(--neo-accent-alt));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  color: var(--neo-accent);
 }
 
 /* ===== Project Filters ===== */
