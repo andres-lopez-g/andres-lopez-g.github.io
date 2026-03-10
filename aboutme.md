@@ -11,11 +11,11 @@ Soy Andrés Julián López, estudiante de ingeniería informática, de 22 años 
 ## Habilidades Técnicas
 
 Tengo conocimientos en:
-- **Backend**: Node.js, Express, API Design, REST
+- **Backend**: Node.js, Express, FastAPI, API Design, REST
 - **Bases de Datos**: PostgreSQL, MySQL, MongoDB, Neo4j
-- **DevOps & Linux**: Linux, Bash, Containers, Automatización, Shell Scripts, Git
-- **Frontend**: HTML5, CSS, JavaScript, UI/UX, Accesibilidad
-- **Lenguajes**: C++, Python, JavaScript, Java, SQL
+- **DevOps & Linux**: Linux, Bash, Docker, Podman, Automatización, Shell Scripts, Git
+- **Frontend**: HTML5, CSS, JavaScript, TypeScript, UI/UX, Accesibilidad
+- **Lenguajes**: C++, Python, JavaScript, TypeScript, Java, SQL
 - **Tecnologías Emergentes**: Machine Learning, Computer Vision (OpenCV), IoT, MicroPython
 
 ## Proyectos Destacados
