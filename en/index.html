@@ -10,113 +10,180 @@ css:
   - /assets/css/neo-theme.css
   - /assets/css/darkmode.css
 js:
+  - /assets/js/typing-effect.js
   - /assets/js/gh-repos.js
   - /assets/js/portfolio-anim.js
   - /assets/js/theme-effects.js
   - /assets/js/micro-interactions.js
+  - /assets/js/interactive.js
 ---
 
-<section class="hero neo-panel gradient-border">
-  <div class="hero-parallax-layer"></div>
-  <div class="hero-text">
-    <h1>Andrés Julián López</h1>
-    <p class="hero-tagline">Computer engineer focused on <strong>Linux</strong>, <strong>Back-end</strong> and <strong>Automation</strong>.</p>
-    <div class="hero-cta">
-      <a href="{{ '/en/aboutme' | relative_url }}" class="btn btn-primary">About</a>
-      <a href="#contact" class="btn btn-outline">Contact</a>
-      <a href="#projects" class="btn btn-outline-alt">Projects</a>
+<section class="hero neo-panel gradient-border" id="main-content" aria-labelledby="hero-heading">
+  <div class="hero-parallax-layer" aria-hidden="true"></div>
+  <div class="hero-layout">
+    <div class="hero-text">
+      <p class="hero-eyebrow"><i class="fas fa-map-marker-alt" aria-hidden="true"></i> Colombia &nbsp;·&nbsp; Computer Engineering</p>
+      <h1 id="hero-heading"><span class="typing-text">Andrés Julián López</span></h1>
+      <p class="hero-tagline">Computer engineer focused on <strong>Linux</strong>, <strong>Back-end</strong>, <strong>Machine Learning</strong> and <strong>Automation</strong>.</p>
+      <div class="hero-cta" role="group" aria-label="Quick navigation">
+        <a href="{{ '/en/aboutme' | relative_url }}" class="btn btn-outline">About</a>
+        <a href="#contact" class="btn btn-outline">Contact</a>
+        <a href="#projects" class="btn btn-outline-alt">Projects</a>
+      </div>
+    </div>
+    <div class="hero-visual" aria-hidden="true">
+      <div class="code-card neo-panel">
+        <div class="code-card-bar"><span></span><span></span><span></span></div>
+        <pre class="code-card-content"><code><span class="cc-kw">const</span> <span class="cc-fn">dev</span> = {
+  <span class="cc-prop">name</span>: <span class="cc-str">"Andrés López"</span>,
+  <span class="cc-prop">focus</span>: [<span class="cc-str">"Backend"</span>, <span class="cc-str">"ML"</span>, <span class="cc-str">"IoT"</span>],
+  <span class="cc-prop">stack</span>: [<span class="cc-str">"Node.js"</span>, <span class="cc-str">"Python"</span>,
+           <span class="cc-str">"Docker"</span>, <span class="cc-str">"Linux"</span>],
+  <span class="cc-prop">available</span>: <span class="cc-bool">true</span>
+};</code></pre>
+      </div>
     </div>
   </div>
 </section>
 
-<section class="section" id="skills">
-  <h2>Core Skills</h2>
-  <ul class="skill-groups reveal">
-    <li>
+<section class="section" id="skills" aria-labelledby="skills-heading">
+  <h2 id="skills-heading">Core Skills</h2>
+  <ul class="skill-groups reveal" role="list">
+    <li role="listitem">
       <h3>Backend</h3>
-      <div class="badges">
-        <span>Node.js</span><span>Express</span><span>API Design</span><span>REST</span><span>MongoDB</span><span>PostgreSQL</span>
+      <div class="badges" role="list" aria-label="Backend technologies">
+        <span role="listitem"><i class="fab fa-node-js" aria-hidden="true"></i> Node.js</span><span role="listitem">Express</span><span role="listitem">FastAPI</span><span role="listitem">API Design</span><span role="listitem">REST</span><span role="listitem"><i class="fas fa-database" aria-hidden="true"></i> MongoDB</span><span role="listitem"><i class="fas fa-database" aria-hidden="true"></i> PostgreSQL</span>
       </div>
     </li>
-    <li>
+    <li role="listitem">
       <h3>DevOps & Linux</h3>
-      <div class="badges">
-        <span>Linux</span><span>Bash</span><span>Containers</span><span>Automation</span><span>Scripting</span>
+      <div class="badges" role="list" aria-label="DevOps and Linux tools">
+        <span role="listitem"><i class="fab fa-linux" aria-hidden="true"></i> Linux</span><span role="listitem"><i class="fas fa-terminal" aria-hidden="true"></i> Bash</span><span role="listitem"><i class="fab fa-docker" aria-hidden="true"></i> Docker</span><span role="listitem">Podman</span><span role="listitem">Automation</span><span role="listitem">Shell Scripts</span><span role="listitem"><i class="fab fa-git-alt" aria-hidden="true"></i> Git</span>
       </div>
     </li>
-    <li>
-      <h3>Frontend</h3>
-      <div class="badges">
-        <span>HTML5</span><span>CSS</span><span>Accessibility</span><span>Semantic UI</span>
+    <li role="listitem">
+      <h3>Frontend & Design</h3>
+      <div class="badges" role="list" aria-label="Frontend technologies">
+        <span role="listitem"><i class="fab fa-html5" aria-hidden="true"></i> HTML5</span><span role="listitem"><i class="fab fa-css3-alt" aria-hidden="true"></i> CSS</span><span role="listitem"><i class="fab fa-js" aria-hidden="true"></i> JavaScript</span><span role="listitem">TypeScript</span><span role="listitem">Accessibility</span><span role="listitem">UI/UX</span>
       </div>
     </li>
-    <li>
-      <h3>Other</h3>
-      <div class="badges">
-        <span>C++</span><span>Python</span><span>SQL</span><span>Clean Design</span><span>Problem Solving</span>
+    <li role="listitem">
+      <h3>ML & Data Science</h3>
+      <div class="badges" role="list" aria-label="Machine learning and data technologies">
+        <span role="listitem">C++</span><span role="listitem"><i class="fab fa-python" aria-hidden="true"></i> Python</span><span role="listitem">SQL</span><span role="listitem">Machine Learning</span><span role="listitem">OpenCV</span><span role="listitem">IoT</span><span role="listitem">MicroPython</span>
       </div>
     </li>
   </ul>
 </section>
 
-<section class="section" id="projects" class="reveal">
-  <h2>Featured Projects</h2>
-  <p class="section-subtitle">Curated selection. Recent repos below.</p>
-  <div class="featured-projects reveal del-1">
-    <article class="fproj reveal del-1" data-tilt>
-      <h3 class="neo-heading">CLI Automation</h3>
-      <p>Terminal utilities to speed up development & deployment workflows.</p>
-      <div class="tags"><span>CLI</span><span>Bash</span><span>Productivity</span></div>
+<section class="section reveal" id="projects" aria-labelledby="projects-heading">
+  <h2 id="projects-heading">Featured Projects</h2>
+  <p class="section-subtitle">Curated selection of my most recent projects.</p>
+
+  <div class="project-filters" role="group" aria-label="Filter projects by technology">
+    <button class="filter-btn active" data-filter="all" aria-pressed="true">All</button>
+    <button class="filter-btn" data-filter="Python" aria-pressed="false">Python</button>
+    <button class="filter-btn" data-filter="JavaScript" aria-pressed="false">JavaScript</button>
+    <button class="filter-btn" data-filter="C++" aria-pressed="false">C++</button>
+    <button class="filter-btn" data-filter="IoT" aria-pressed="false">IoT</button>
+    <button class="filter-btn" data-filter="ML" aria-pressed="false">ML / AI</button>
+  </div>
+
+  <div class="featured-projects reveal del-1" id="projects-grid">
+    <article class="fproj reveal del-1 glow-card" data-tilt data-tags="HTML,Computer Vision,IoT">
+      <div class="project-icon" aria-hidden="true"><i class="fas fa-car"></i></div>
+      <h3 class="neo-heading">CarScan</h3>
+      <p>Vehicle identification system using computer vision to automate registration and access control.</p>
+      <div class="tags"><span>HTML</span><span>Computer Vision</span><span>IoT</span></div>
+      <a href="https://github.com/andres-lopez-g/CarScan" target="_blank" rel="noopener" class="project-link"><i class="fab fa-github" aria-hidden="true"></i> View code</a>
     </article>
-    <article class="fproj reveal del-2" data-tilt>
-      <h3 class="neo-heading">Service API</h3>
-      <p>Modular architecture with auth, pagination and monitoring.</p>
-      <div class="tags"><span>Node.js</span><span>REST</span><span>Scalability</span></div>
+    <article class="fproj reveal del-2 glow-card" data-tilt data-tags="JavaScript,Node.js,AI">
+      <div class="project-icon" aria-hidden="true"><i class="fas fa-robot"></i></div>
+      <h3 class="neo-heading">AsisT</h3>
+      <p>All-in-one intelligent assistant for financial management, files and daily planning focused on productivity.</p>
+      <div class="tags"><span>JavaScript</span><span>Node.js</span><span>AI</span></div>
+      <a href="https://github.com/andres-lopez-g/AsisT" target="_blank" rel="noopener" class="project-link"><i class="fab fa-github" aria-hidden="true"></i> View code</a>
     </article>
-    <article class="fproj reveal del-3" data-tilt>
-      <h3 class="neo-heading">Technical Dashboards</h3>
-      <p>Lightweight dashboards to visualize operational metrics.</p>
-      <div class="tags"><span>UX</span><span>Accessibility</span><span>Visualization</span></div>
+    <article class="fproj reveal del-3 glow-card" data-tilt data-tags="Python,ML,OpenCV">
+      <div class="project-icon" aria-hidden="true"><i class="fas fa-eye-slash"></i></div>
+      <h3 class="neo-heading">ML Face Censor</h3>
+      <p>Face censoring tool using Machine Learning for privacy protection in images.</p>
+      <div class="tags"><span>Python</span><span>ML</span><span>OpenCV</span></div>
+      <a href="https://github.com/andres-lopez-g/ml-face-censor" target="_blank" rel="noopener" class="project-link"><i class="fab fa-github" aria-hidden="true"></i> View code</a>
+    </article>
+    <article class="fproj reveal del-1 glow-card" data-tilt data-tags="C++,Algorithms,Compression">
+      <div class="project-icon" aria-hidden="true"><i class="fas fa-compress"></i></div>
+      <h3 class="neo-heading">Huffman Compression</h3>
+      <p>Implementation of the Huffman compression algorithm in C++ for efficient data encoding.</p>
+      <div class="tags"><span>C++</span><span>Algorithms</span><span>Compression</span></div>
+      <a href="https://github.com/andres-lopez-g/huffman-compression" target="_blank" rel="noopener" class="project-link"><i class="fab fa-github" aria-hidden="true"></i> View code</a>
+    </article>
+    <article class="fproj reveal del-2 glow-card" data-tilt data-tags="Python,IoT,Sensors">
+      <div class="project-icon" aria-hidden="true"><i class="fas fa-cloud"></i></div>
+      <h3 class="neo-heading">ESP32 Meteorology</h3>
+      <p>Weather station with ESP32 and MicroPython that sends data to ThingSpeak for environmental monitoring.</p>
+      <div class="tags"><span>Python</span><span>IoT</span><span>Sensors</span></div>
+      <a href="https://github.com/andres-lopez-g/esp32-meteorologia" target="_blank" rel="noopener" class="project-link"><i class="fab fa-github" aria-hidden="true"></i> View code</a>
+    </article>
+    <article class="fproj reveal del-3 glow-card" data-tilt data-tags="Python,SQL,Education">
+      <div class="project-icon" aria-hidden="true"><i class="fas fa-database"></i></div>
+      <h3 class="neo-heading">Torre de Babel</h3>
+      <p>Educational game built with Python and SQL to learn about programming languages interactively.</p>
+      <div class="tags"><span>Python</span><span>SQL</span><span>Education</span></div>
+      <a href="https://github.com/andres-lopez-g/torredebabel" target="_blank" rel="noopener" class="project-link"><i class="fab fa-github" aria-hidden="true"></i> View code</a>
     </article>
   </div>
 </section>
 
-<section class="section reveal" id="repos">
-  <h2>Recent GitHub Activity</h2>
+<section class="section reveal" id="repos" aria-labelledby="repos-heading">
+  <h2 id="repos-heading">Recent GitHub Activity</h2>
   <p class="section-subtitle">Latest relevant repositories.</p>
-  <div id="gh-repos-list" class="repo-grid" aria-live="polite">
-    <div class="repo-card skeleton"></div>
-    <div class="repo-card skeleton"></div>
-    <div class="repo-card skeleton"></div>
+  <div id="gh-repos-list" class="repo-grid" aria-live="polite" aria-label="GitHub repositories">
+    <div class="repo-card skeleton" aria-hidden="true"></div>
+    <div class="repo-card skeleton" aria-hidden="true"></div>
+    <div class="repo-card skeleton" aria-hidden="true"></div>
+    <div class="repo-card skeleton" aria-hidden="true"></div>
+    <div class="repo-card skeleton" aria-hidden="true"></div>
+    <div class="repo-card skeleton" aria-hidden="true"></div>
   </div>
   <div class="section-cta">
-    <a id="gh-profile-link" class="btn btn-primary" href="https://github.com/andres-lopez-g" target="_blank" rel="noopener">View all</a>
+    <a id="gh-profile-link" class="btn btn-primary" href="https://github.com/andres-lopez-g" target="_blank" rel="noopener">View all on GitHub</a>
   </div>
 </section>
 
-<section class="section reveal" id="experience">
-  <h2>Timeline</h2>
-  <div class="timeline">
-    <div class="t-item">
-      <div class="t-point"></div>
-      <h4>2024 - Now</h4>
-      <p>Personal automation & API projects emphasizing maintainability.</p>
+<section class="section reveal" id="experience" aria-labelledby="experience-heading">
+  <h2 id="experience-heading">Experience & Timeline</h2>
+  <div class="timeline" role="list">
+    <div class="t-item" role="listitem">
+      <div class="t-point" aria-hidden="true"></div>
+      <h4>2026 - Present</h4>
+      <p>Development of advanced projects: computer vision systems, AI-powered intelligent assistants, and IoT solutions with ESP32 and MicroPython.</p>
     </div>
-    <div class="t-item">
-      <div class="t-point"></div>
+    <div class="t-item" role="listitem">
+      <div class="t-point" aria-hidden="true"></div>
+      <h4>2025</h4>
+      <p>Implementation of compression algorithms, machine learning for image processing, and educational projects with polyglot databases.</p>
+    </div>
+    <div class="t-item" role="listitem">
+      <div class="t-point" aria-hidden="true"></div>
+      <h4>2024</h4>
+      <p>Personal automation and API projects with a focus on best practices and maintainability.</p>
+    </div>
+    <div class="t-item" role="listitem">
+      <div class="t-point" aria-hidden="true"></div>
       <h4>2023</h4>
-      <p>Strengthened Linux, scripting, databases.</p>
+      <p>Consolidation of skills in Linux, scripting, databases and backend development.</p>
     </div>
-    <div class="t-item">
-      <div class="t-point"></div>
+    <div class="t-item" role="listitem">
+      <div class="t-point" aria-hidden="true"></div>
       <h4>Early</h4>
-      <p>Interest in engineering logic applied to software craft.</p>
+      <p>Interest in engineering, logic and problem-solving applied to software.</p>
     </div>
   </div>
 </section>
 
-<section class="section reveal" id="contact">
-  <h2>Contact</h2>
+<section class="section reveal" id="contact" aria-labelledby="contact-heading">
+  <h2 id="contact-heading">Contact</h2>
   <p class="section-subtitle">Open to collaborate or chat.</p>
   {% include social-networks-links.html %}
 </section>
